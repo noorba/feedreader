@@ -64,8 +64,8 @@ $(function() {
          */
 
         it('should be hidden by default', function() {
-            var menu = $('body').hasClass('menu-hidden');
-            expect(menu).toBe(true);
+            var menuHidden = $('body').hasClass('menu-hidden');
+            expect(menuHidden).toBe(true);
         });
 
          /* TODO: Write a test that ensures the menu changes
@@ -77,14 +77,14 @@ $(function() {
 
             it('should display the menu', function() {
                 $('.menu-icon-link').trigger('click');
-                var menu = $('body').hasClass('menu-hidden');
-                expect(menu).not.toBe(true);
+                var menuHidden = $('body').hasClass('menu-hidden');
+                expect(menuHidden).not.toBe(true);
             });
 
             it('should hide the menu', function() {
                 $('.menu-icon-link').trigger('click');
-                var menu = $('body').hasClass('menu-hidden');
-                expect(menu).toBe(true);
+                var menuHidden = $('body').hasClass('menu-hidden');
+                expect(menuHidden).toBe(true);
             });
         });
     });
@@ -102,7 +102,6 @@ $(function() {
 
         beforeEach(function(done) {
             loadFeed(0, done);
-            done();
         });
 
         it('should contain at least one entry', function(done) {
